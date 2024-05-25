@@ -21,7 +21,7 @@ def get_answer():
         total = proxies['total']
         
         aleatorio = random.randint(0,total)
-        proxy = data[aleatorio]
+        proxy = data[500]
         proxy = "http://"+proxy['ip']+":"+proxy['port']
         G4F_PROXY=proxy
         client = Client()
