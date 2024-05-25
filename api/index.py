@@ -15,14 +15,14 @@ def get_answer():
     if not question:
         return jsonify({'error': 'Question parameter is required'}), 400    
     try:
-        proxies = requests.get("https://proxylist.geonode.com/api/proxy-list?protocols=http&limit=2500&page=1&sort_by=lastChecked&sort_type=desc")
-        proxies = proxies.json()
-        data = proxies['data']
-        total = proxies['total']
+        #proxies = requests.get("https://proxylist.geonode.com/api/proxy-list?protocols=http&limit=2500&page=1&sort_by=lastChecked&sort_type=desc")
+        #proxies = proxies.json()
+        #data = proxies['data']
+        #total = proxies['total']
         
-        aleatorio = random.randint(0,total)
-        proxy = data[aleatorio]
-        proxy = "http://"+proxy['ip']+":"+proxy['port']
+        #aleatorio = random.randint(0,total)
+        #proxy = data[aleatorio]
+        proxy = "http://67.43.227.227:20627"
         G4F_PROXY=proxy
         client = Client()
         response = client.chat.completions.create(
